@@ -35,6 +35,11 @@ docker logs ID-CONTENEDOR
 
 # Git
 
+### Clonar repositorio
+```bash
+git clone URL-REPOSITORIO
+```
+
 ### crear una rama
 ```bash
 git checkout -b NOMBRE-DE-NUEVA-RAMA
