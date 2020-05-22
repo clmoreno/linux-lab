@@ -65,3 +65,31 @@ git push origin NOMBRE-DE-RAMA
 ```bash
 git pull origin NOMBRE-DE-RAMA
 ```
+
+
+# Linux (bash)
+
+### Crear un directorio
+```bash
+mkdir NOMBRE-DEL-DIRECTORIO
+```
+
+### Eliminar un archivo
+```bash
+rm NOMBRE-DEL-ARCHIVO
+```
+
+### Eliminar un directorio
+```bash
+rm -r NOMBRE-DEL-DIRECTORIO
+```
+
+### Cambiar de directorio
+```bash
+cd NOMBRE-DEL-DIRECTORIO
+```
+
+### Ver ubicación actual ¿En donde estoy!!?
+```bash
+pwd
+```
