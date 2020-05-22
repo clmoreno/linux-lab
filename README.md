@@ -1,4 +1,5 @@
-# sistemas-operativos-2
+# Linux lab
+Repositoario para almacenar documentos del laboratorio de linux
 
 # Docker
 
@@ -31,6 +32,11 @@ docker kill ID-DEL-CONTENEDOR
 ```bash
 docker logs ID-CONTENEDOR
 ```
+
+### Ingresar al un contenedor docker
+ ```bash
+ docker exec -it ID-DEL-CONTENEDOR /bin/bash
+ ```
 
 
 # Git
