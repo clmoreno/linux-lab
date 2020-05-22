@@ -22,11 +22,16 @@ docker run -d NOMBRE-DE-LA-IMAGEN
 docker ps
 ```
 
-
 ### Detener un contenedor
-````bash
+```bash
 docker kill ID-DEL-CONTENEDOR
 ```
+
+### Ver logs de un contenedor
+```bash
+docker logs ID-CONTENEDOR
+```
+
 
 # Git
 
