@@ -39,3 +39,16 @@ services:
     
     volumes:
       - "~/data/postgresql-data:/lib/postgresql/data"
+
+  apache:
+    build:
+      context: ./apache
+      dockerfile: Dockerfile
+    image: apache:latest
+
+    ports: 
+      - "80:80"
+
+    volumes:
+      - "~/data/website:/var/www/html"
+      - "./apache/conf/default-vhost.conf:/etc/apache2/sites-enabled/000-default.conf"
