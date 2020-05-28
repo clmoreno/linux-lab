@@ -1,0 +1,54 @@
+version: "3.8"
+services:
+  ssh:
+    build:
+      context: ./ssh
+      dockerfile: Dockerfile
+    image: ssh:latest
+
+    ports:
+      - "5022:22"
+
+    volumes:
+      - "~/data:/data"
+
+  samba:
+    build:
+      context: ./samba
+      dockerfile: Dockerfile
+    image: samba:latest
+
+    ports:
+      - "137:137/udp"
+      - "138:138/udp"
+      - "139:139"
+      - "445:445"
+
+    volumes:
+      - "./samba/conf/smb.conf:/etc/samba/smb.conf"
+      - "~/data:/samba"
+
+  postgresql:
+    build:
+      context: ./postgresql
+      dockerfile: Dockerfile
+    image: postgresql:latest
+
+    ports: 
+      - "5432:5432"
+    
+    volumes:
+      - "~/data/postgresql-data:/lib/postgresql/data"
+
+  apache:
+    build:
+      context: ./apache
+      dockerfile: Dockerfile
+    image: apache:latest
+
+    ports: 
+      - "80:80"
+
+    volumes:
+      - "~/data/website:/var/www/html"
+      - "./apache/conf/default-vhost.conf:/etc/apache2/sites-enabled/000-default.conf"
